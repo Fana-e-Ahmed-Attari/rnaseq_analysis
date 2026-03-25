@@ -59,10 +59,15 @@ bash scripts/run_container_pipeline.sh
 ---
 
 ## 📊 Results Showcase
-The Dockerized run successfully processed the **Salmonella Typhimurium** benchmark, generating high-fidelity transcriptomic results. Key findings are visualised in the [`visualizations/`](./visualizations) directory:
+The Dockerized run successfully processed the **Salmonella Typhimurium** benchmark. Key findings and statistical matrices are provided below:
 
+### 🎨 Visualizations ([`visualizations/`](./visualizations))
+- **[Salmonella_Docker_PCA_Heatmap.pdf](./visualizations/Salmonella_Docker_PCA_Heatmap.pdf)**: Cluster analysis of containerized libraries.
 - **[Salmonella_Docker_MA_Plot.pdf](./visualizations/Salmonella_Docker_MA_Plot.pdf)**: Distribution of fold-changes across expression levels.
 - **[Salmonella_Docker_Volcano_Plot.pdf](./visualizations/Salmonella_Docker_Volcano_Plot.pdf)**: Statistical significance of the InSPI2 vs LSP contrast.
+
+### 📉 Statistical Results ([`results/`](./results))
+- **[Salmonella_Docker_DGE_Results.csv](./results/Salmonella_Docker_DGE_Results.csv)**: Full Differential Gene Expression (DGE) matrix generated within the Docker environment.
 
 ---
 
