@@ -40,6 +40,13 @@ Throughout these projects, I have mastered several core competencies in modern b
 
 ---
 
+---
+
+## 🙏 Acknowledgments
+Special thanks to **Dr. Muhammad Aammar Tufail** and the **Codanics** platform. The projects in this repository were developed and refined as part of the **"Bioinformatics ka Chilla"** course, which provided the foundational knowledge and technical training required to master RNA-Seq analysis.
+
+---
+
 <div align="center">
   <i>Developed and curated by Fana-e-Ahmed-Attari – Professional Bioinformatics Portfolio.</i>
 </div>
