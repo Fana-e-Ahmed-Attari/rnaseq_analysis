@@ -1,59 +1,71 @@
 <div align="center">
 
-# 🧪 *Agrobacterium tumefaciens*: A Deep Dive into Virulence Transcriptomics
+# 🧪 *Agrobacterium tumefaciens* 1D1108: Virulence & Competition Transcriptomics
 
 [![Bioinformatics Portfolio](https://img.shields.io/badge/Portfolio-Agrobacterium%20Project-blue.svg)]()
 [![Analysis: READemption](https://img.shields.io/badge/Analysis-READemption-green.svg)](https://reademption.readthedocs.io/)
 [![Organism: Agrobacterium](https://img.shields.io/badge/Organism-A.%20tumefaciens%201D1108-orange.svg)]()
+[![DOI: 10.1099/mgen.0.001485](https://img.shields.io/badge/DOI-10.1099%2Fmgen.0.001485-red.svg)](https://doi.org/10.1099/mgen.0.001485)
 
-*A comprehensive investigation into the molecular 'on-switch' for plant infection, specifically analyzing the global transcriptomic reprogramming induced by Acetosyringone.*
+*A professional bioinformatics investigation into the transcriptomic reprogramming of a model plant pathogen, specifically focusing on the induction of the virulence (vir) regulon.*
 
 </div>
 
 ---
 
 ## 🔬 Project Overview
-This project represents a curated bioinformatics study of ***Agrobacterium tumefaciens* 1D1108**. In this study, I processed and analyzed raw RNA-Seq data to characterize how this pathogen prepares for host infection. By contrasting a control environment with one containing **Acetosyringone (AS)**—a chemical signal from wounded plants—this analysis identifies the core "virulence toolkit" the bacterium uses to transform plant cells.
+This project is a curated bioinformatics study focusing on the transcriptomic response of ***Agrobacterium tumefaciens* 1D1108** (Genomospecies G1) to environmental signals. The analysis is based on the benchmark study: **"Plant-pathogenic *Agrobacterium tumefaciens* strains have diverse type VI effector-immunity pairs and vary in in-planta competitiveness"** ([DOI: 10.1099/mgen.0.001485](https://doi.org/10.1099/mgen.0.001485)).
 
 ---
 
-## 📜 Why I Selected This Paper & Why It’s the Best Choice
-As a beginner in bioinformatics, selecting the right study is crucial for learning. This specific manuscript, **"Comparative transcriptomics of Agrobacterium"**, was chosen for three primary reasons:
-1.  **Fundamental Significance:** *Agrobacterium* is the gold standard for studying plant-microbe interactions and the basis of modern plant genetic engineering.
-2.  **Biological Clarity:** The response to Acetosyringone is a textbook example of an environmental "trigger" that activates a well-defined set of genes (the *vir* regulon), providing an excellent benchmark for verifying the accuracy of a bioinformatic pipeline.
-3.  **Genomic Complexity:** With multiple chromosomes and a pathogenic Ti plasmid, this project offered the perfect challenge to showcase my ability to handle complex, multipartite bacterial genomes.
+## 📚 Why I Selected This Paper & My Practice Focus
+As a beginner in bioinformatics, this paper was selected for its exceptional clarity and multi-factorial design. While the original study rigorously tested four distinct conditions:
+1.  **Control** (pH 7.0)
+2.  **Acidic Stress** (pH 5.5)
+3.  **Acetosyringone (AS) Induction**
+4.  ***In-Planta* Infection** (*Nicotiana benthamiana*)
+
+For the purpose of this **educational practice project**, I have strategically focused exclusively on the **Control (Condition A)** vs. **Acetosyringone Induction (Condition C)**. 
+
+### Why this focus?
+- **Simplification for Mastering Fundamentals:** By isolating the "Acetosyringone Switch," I can focus on mastering the core READemption pipeline and the fundamental statistics of Differential Gene Expression (DGE) before tackling more complex environmental interactions.
+- **Benchmark Discovery:** The Acetosyringone response provides the most dramatic and well-documented biological signal (the *vir* regulon), making it the perfect "Gold Standard" for validating my bioinformatic workflows.
 
 ---
 
 ## 🛠️ What I Did: The Bioinformatic Workflow
-I engineered a complete, automated pipeline in Bash to handle every stage of the analysis. Here is my high-level methodology:
+I developed a reproducible Bash-based pipeline to process the paired-end RNA-Seq libraries associated with this study.
 
-- **🏗️ Workspace Engineering:** I initialized a professional **READemption** project structure to maintain data integrity throughout the alignment and quantification phases.
-- **📥 Automated Data Retrieval:** I utilized the `grabseqs` tool to pull approximately **15 GB** of raw paired-end sequence data directly from the NCBI SRA (BioProject PRJNA1111437).
-- **🧬 Genomic Reference Mapping:** I programmed the pipeline to fetch the *Agrobacterium* reference sequences and GFF3 annotations, ensuring all reads were mapped against the correct genomic features (CDS, tRNA, and rRNA).
-- **📉 Differential Gene Expression (DGE):** I leveraged **DESeq2** to statistically compare the "Control" vs. "Induced" groups, successfully isolating the genes that are most significantly up-regulated during the early stages of infection.
-
----
-
-## 📊 Dataset Selection & Optimization
-> [!IMPORTANT]
-> **Dataset Subsampling Note:**
-> Due to significant **computational and hardware storage limitations** on my local environment, I strategically selected a **specific subset of the original sequencing runs**. This selective approach allowed me to maintain a rapid and efficient analysis cycle while still preserving enough statistical power to identify key biological trends (like *vir* gene induction) with high confidence.
+- **🏗️ Workspace Engineering:** Initialized a professional READemption environment tailored for the multipartite genome of strain 1D1108 (Circular Chromosome, Linear Chromosome, and Ti Plasmid).
+- **📥 Strategic Data Acquisition:** Fetches approximately **15 GB** of raw paired-end sequence data from the SRA, focusing on the Control and AS-Induced biological replicates.
+- **🧬 Feature-Aware Mapping:** Conducted read alignment across all genomic elements, specifically quantifying transcripts for **CDS, tRNA, and rRNA** to capture the full breadth of the transcriptional shift.
+- **📉 DGE Analysis:** Utilized **DESeq2** to solve for the Acetosyringone-sensitive regulon, identifying genes required for the assembly of the Type IV Secretion System (T4SS).
 
 ---
 
-## 📈 Key Findings of the Study
-The analysis revealed several critical insights into *Agrobacterium* biology:
-- **Massive Reprogramming:** Nearly **25% of the genome** reacts to the chemical signal, indicating a global shift from growth to virulence.
-- **T4SS Induction:** Rapid and coordinated activation of the *virB*, *virC*, and *virD* operons, which form the machinery needed to inject DNA into plant cells.
-- **Ti Plasmid Replication:** The induction of the *repABC* system, showing that the bacterium multi-tasks by also preparing its pathogenic plasmid for increased replication.
+## 📊 Experimental Design & Library Mapping
+
+| Library ID | Condition | Treatment | Replicate |
+| :--- | :--- | :--- | :--: |
+| `control_1` | Control | Basal Medium (pH 7.0) | 1 |
+| `control_2` | Control | Basal Medium (pH 7.0) | 2 |
+| `control_3` | Control | Basal Medium (pH 7.0) | 3 |
+| **`AS_induced_1`** | **Induced** | **Acetosyringone** | 1 |
+| **`AS_induced_2`** | **Induced** | **Acetosyringone** | 2 |
+| **`AS_induced_3`** | **Induced** | **Acetosyringone** | 3 |
 
 ---
 
-## 📂 Repository Contents
-- **`run_agrobacterium_pipeline.sh`**: The master script that automates the entire analysis.
-- **`README.md`**: This detailed project documentation.
-- **`manuscript/`**: Contains the full scientific paper for biological reference.
+## 📈 Key Findings & Strategic Insights
+Though this project focused on a subset of the data, the findings align with the expert-level conclusions of the source paper:
+- **T4SS Virginity:** The analysis confirms the intense up-regulation of the *vir* operons (*virB, virC, virD, virE*) required for DNA transfer.
+- **Co-Regulation with T6SS:** The study highlights that strain 1D1108 is unique in its divergent **VgrG profile** and highly specific **Tde toxin-immunity pairs**, which are co-induced to maintain competitive fitness during infection.
+- **Ti Plasmid Replication:** Observed induction of the *repABC* operon, demonstrating synchronized plasmid copy-number increases upon virulence signaling.
+
+---
+
+## ⚠️ Computational Constraints & Optimization
+To maintain pipeline performance on a standard workstation, a **selected subset of datasets** was utilized. This strategic sub-sampling ensures a fast computational turnaround while maintaining sufficient statistical power to reproduce the primary biological conclusions of the manuscript.
 
 ---
 
