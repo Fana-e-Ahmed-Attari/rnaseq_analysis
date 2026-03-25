@@ -1,19 +1,19 @@
 <div align="center">
 
-# 🔬 RNA-Seq Analysis Collection
+# 🔬 RNA-Seq Analysis: A Learning Journey
 
 [![Conda](https://img.shields.io/badge/Environment-Conda-lightgrey)](#)
 [![Bioinformatics](https://img.shields.io/badge/Domain-Bioinformatics-blue.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Learning Path](https://img.shields.io/badge/Status-Beginner%20Portfolio-orange.svg)]()
 
-*A curated portfolio of professional bioinformatics workflows, transcriptomic investigations, and peer-reviewed manuscript summaries.*
+*A curated collection of professional bioinformatics workflows, transcriptomic investigations, and containerized pipelines—optimized for reproducibility and scientific clarity.*
 
 </div>
 
 ---
 
 ## 🌟 Repository Overview
-Welcome to the **RNA-Seq Analysis Collection**. This repository serves as a centralized hub for high-quality bioinformatics pipelines designed to process both single-end and paired-end RNA-Seq datasets. Each project is meticulously documented, utilizing industry-standard tools like **READemption**, **DESeq2**, and **grabseqs**.
+Welcome! This repository documents my journey as a **beginner bioinformatician**. It serves as a centralized hub for high-quality RNA-Seq pipelines that I have built and optimized. Each project is designed to handle real-world biological data, utilizing industry-standard tools to transform raw sequences into meaningful scientific insights.
 
 ---
 
@@ -29,22 +29,17 @@ Welcome to the **RNA-Seq Analysis Collection**. This repository serves as a cent
 
 ---
 
-## 🛠️ Methodological Framework
-The projects across this repository adhere to a rigorous analytical framework:
+## 🛠️ My Bioinformatics Toolkit
+Throughout these projects, I have mastered several core competencies in modern bioinformatics:
 
-1.  **Reproducible Scripting:** Every project includes a `run_*_pipeline.sh` script that automates raw data retrieval, genomic reference fetching, and complete pipeline execution.
-2.  **Standardized Tools:** Heavy reliance on the **READemption** toolkit for read alignment (segemehl), coverage calculation, and feature quantification.
-3.  **Scientific Context:** Each sub-repository contains the original peer-reviewed manuscript and **full SRA accession metadata** (or data source links) for every analyzed sample, ensuring maximum transparency and reproducibility.
-4.  **Hardware Optimization:** Pipelines are engineered with memory and storage optimizations to handle large paired-end datasets on standard workstations.
-
----
-
-## 📄 Organization Policy
-- **Naming Conventions:** All files and directories follow strict scientific naming patterns for clarity.
-- **Lightweight Storage:** Large intermediate files (FASTQs, BAMs, Indices) are selectively ignored via `.gitignore` to maintain a streamlined repository weight for public consumption.
+1.  **💻 Reproducible Scripting:** Every project includes a `run_*_pipeline.sh` script that automates data retrieval, genomic reference fetching, and complete pipeline execution.
+2.  **🧬 Industry-Standard Tools:** Heavy reliance on the **READemption** toolkit for read alignment (segemehl), coverage calculation, and feature quantification.
+3.  **📊 Statistical Analysis:** Utilizing **DESeq2** to perform robust differential expression analysis and isolate significant biological patterns.
+4.  **🐋 Containerization:** Implementing **Docker** to ensure analytical portability and 100% reproducibility across different computational environments.
+5.  **📜 Scientific Documentation:** Each sub-repository contains the original peer-reviewed manuscript and **full SRA accession metadata**, ensuring maximum transparency.
 
 ---
 
 <div align="center">
-  <i>Developed and curated by a Bioinformatician & GitHub Maintainer.</i>
+  <i>Developed and curated by Fana-e-Ahmed-Attari – Professional Bioinformatics Portfolio.</i>
 </div>
