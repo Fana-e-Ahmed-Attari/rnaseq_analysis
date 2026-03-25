@@ -13,6 +13,18 @@
 
 ---
 
+## 📑 Table of Contents
+1. [Project Overview](#-project-overview)
+2. [Why I Selected This Paper & My Practice Focus](#-why-i-selected-this-paper--my-practice-focus)
+3. [What I Did: The Bioinformatic Workflow](#️-what-i-did-the-bioinformatic-workflow)
+4. [Experimental Design & Library Mapping](#-experimental-design--library-mapping)
+5. [Key Findings & Strategic Insights](#-key-findings--strategic-insights)
+6. [Analytical Visualizations](#-analytical-visualizations)
+7. [Analytical Results](#-analytical-results)
+8. [Repository Contents](#-repository-contents)
+
+---
+
 ## 🔬 Project Overview
 This project is a curated bioinformatics study focusing on the transcriptomic response of ***Agrobacterium tumefaciens* 1D1108** (Genomospecies G1) to environmental signals. The analysis is based on the benchmark study: **"Plant-pathogenic *Agrobacterium tumefaciens* strains have diverse type VI effector-immunity pairs and vary in in-planta competitiveness"** ([DOI: 10.1099/mgen.0.001485](https://doi.org/10.1099/mgen.0.001485)).
 

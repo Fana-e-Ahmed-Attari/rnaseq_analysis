@@ -13,10 +13,12 @@
 
 ## 📑 Table of Contents
 1. [Overview](#-overview)
-2. [Workflow Architecture](#-workflow-architecture)
+2. [Experimental Design & Library Mapping](#-experimental-design--library-mapping)
 3. [Prerequisites](#-prerequisites)
 4. [Usage Execution](#-usage-execution)
-5. [Outputs](#-outputs)
+5. [Analytical Visualizations](#-analytical-visualizations)
+6. [Analytical Results](#-analytical-results)
+7. [Outputs](#-outputs)
 
 ---
 

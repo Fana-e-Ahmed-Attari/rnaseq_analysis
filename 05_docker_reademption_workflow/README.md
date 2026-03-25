@@ -12,6 +12,15 @@
 
 ---
 
+## 📑 Table of Contents
+1. [Overview](#-overview)
+2. [Why Containerization?](#-why-containerization)
+3. [Project Architecture](#️-project-architecture)
+4. [Usage Guide](#-usage-guide)
+5. [Results Showcase](#-results-showcase)
+
+---
+
 ## 🔬 Overview
 This project showcases a **Container-First** approach to transcriptomics. By utilizing **Docker**, I have encapsulated the entire **READemption** environment—including its complex dependencies like `segemehl` and `DESeq2`—into a portable unit. This ensures that the analysis performed today on my machine will yield identical results years from now on any server worldwide.
 
