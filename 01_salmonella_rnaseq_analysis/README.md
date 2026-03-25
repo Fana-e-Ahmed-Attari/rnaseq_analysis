@@ -54,8 +54,16 @@ bash run_salmonella_analysis.sh
 
 ## 🎨 Analytical Visualizations
 Key results from the Salmonella analysis are curated in the [`visualizations/`](./visualizations) directory:
+- **[Salmonella_PCA_Heatmap.pdf](./visualizations/Salmonella_PCA_Heatmap.pdf)**: Comprehensive mapping of library clustering and metabolic variance.
 - **[Salmonella_MA_Plot.pdf](./visualizations/Salmonella_MA_Plot.pdf)**: Illustrates the expression breadth and fold-change disparity between InSPI2 and LSP conditions.
 - **[Salmonella_Volcano_Plot.pdf](./visualizations/Salmonella_Volcano_Plot.pdf)**: Visualizes statistical significance against log2 fold change, highlighting the primary transcriptomic recruits.
+
+---
+
+## 📊 Analytical Results
+Detailed statistical matrices from the DESeq2 pipeline are available in the [`results/`](./results) directory:
+
+- **[Salmonella_DGE_Results.csv](./results/Salmonella_DGE_Results.csv)**: Complete differential expression table (log2FC, padj) with integrated genomic annotations.
 
 ---
 

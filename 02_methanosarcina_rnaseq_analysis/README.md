@@ -58,8 +58,16 @@ bash run_archaea_pipeline.sh
 
 ## 🎨 Analytical Visualizations
 Key results from the DESeq2 analysis are curated in the [`visualizations/`](./visualizations) directory:
+- **[Methanosarcina_PCA_Heatmap.pdf](./visualizations/Methanosarcina_PCA_Heatmap.pdf)**: Visualizes sample clustering and overall expression hierarchies between experimental groups.
 - **[Methanosarcina_MA_Plot.pdf](./visualizations/Methanosarcina_MA_Plot.pdf)**: Displays the distribution of differentially expressed genes.
 - **[Methanosarcina_Volcano_Plot.pdf](./visualizations/Methanosarcina_Volcano_Plot.pdf)**: Highlights the most statistically significant genes transitioning between Wild-Type and Mutant states.
+
+---
+
+## 📊 Analytical Results
+The full statistical output for the comparative transcriptomic analysis is available in the [`results/`](./results) directory:
+
+- **[Methanosarcina_DGE_Results.csv](./results/Methanosarcina_DGE_Results.csv)**: Detailed CSV matrix providing gene-level significance and fold-change parameters.
 
 ---
 

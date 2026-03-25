@@ -69,8 +69,16 @@ Though this project focused on a subset of the data, the findings align with the
 ## 🎨 Analytical Visualizations
 To provide immediate insight into the transcriptomic results, key analytical plots have been curated in the [`visualizations/`](./visualizations) directory:
 
+- **[Agrobacterium_PCA_Heatmap.pdf](./visualizations/Agrobacterium_PCA_Heatmap.pdf)**: A dual-layered visualization providing both a Principal Component Analysis (PCA) of sample clustering and a Heatmap of global expression disparities.
 - **[Agrobacterium_MA_Plot.pdf](./visualizations/Agrobacterium_MA_Plot.pdf)**: Illustrates the relationship between intensity and fold-change, highlighting the significant up-regulation of virulence factors.
 - **[Agrobacterium_Volcano_Plot.pdf](./visualizations/Agrobacterium_Volcano_Plot.pdf)**: Visualizes the statistical significance (p-value) against the magnitude of change (log2 fold change), showcasing the robust response to Acetosyringone.
+
+---
+
+## 📊 Analytical Results
+The complete dataset featuring differential expression statistics for every gene is available in the [`results/`](./results) directory:
+
+- **[Agrobacterium_DGE_Results.csv](./results/Agrobacterium_DGE_Results.csv)**: This master table includes Log2 Fold Change, p-values, Adjusted p-values, and full genomic annotations—allowing for deep-dive exploratory analysis.
 
 ---
 
@@ -78,7 +86,8 @@ To provide immediate insight into the transcriptomic results, key analytical plo
 - **`run_agrobacterium_pipeline.sh`**: The master script that automates the entire analysis.
 - **`README.md`**: This detailed project documentation.
 - **`manuscript/`**: Contains the full scientific paper for biological reference.
-- **`visualizations/`**: curated analytical plots (MA and Volcano plots).
+- **`visualizations/`**: Curated analytical plots (PCA, Heatmap, MA, and Volcano plots).
+- **`results/`**: Complete Differential Gene Expression (DGE) matrices in CSV format.
 
 ---
 
