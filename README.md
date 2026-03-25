@@ -33,7 +33,7 @@ The projects across this repository adhere to a rigorous analytical framework:
 
 1.  **Reproducible Scripting:** Every project includes a `run_*_pipeline.sh` script that automates raw data retrieval, genomic reference fetching, and complete pipeline execution.
 2.  **Standardized Tools:** Heavy reliance on the **READemption** toolkit for read alignment (segemehl), coverage calculation, and feature quantification.
-3.  **Scientific Context:** Each sub-repository contains the original peer-reviewed manuscript associated with the study, providing essential biological background and validation benchmarks.
+3.  **Scientific Context:** Each sub-repository contains the original peer-reviewed manuscript and **full SRA accession metadata** (or data source links) for every analyzed sample, ensuring maximum transparency and reproducibility.
 4.  **Hardware Optimization:** Pipelines are engineered with memory and storage optimizations to handle large paired-end datasets on standard workstations.
 
 ---

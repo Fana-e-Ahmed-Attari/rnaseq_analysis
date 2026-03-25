@@ -7,7 +7,7 @@
 [![Organism: Agrobacterium](https://img.shields.io/badge/Organism-A.%20tumefaciens%201D1108-orange.svg)]()
 [![DOI: 10.1099/mgen.0.001485](https://img.shields.io/badge/DOI-10.1099%2Fmgen.0.001485-red.svg)](https://doi.org/10.1099/mgen.0.001485)
 
-*A professional bioinformatics investigation into the transcriptomic reprogramming of a model plant pathogen, specifically focusing on the induction of the virulence (vir) regulon.*
+*A comprehensive investigation into the transcriptomic landscape of Agrobacterium tumefaciens 1D1108 under Acetosyringone induction.*
 
 </div>
 
@@ -45,14 +45,14 @@ I developed a reproducible Bash-based pipeline to process the paired-end RNA-Seq
 
 ## 📊 Experimental Design & Library Mapping
 
-| Library ID | Condition | Treatment | Replicate |
-| :--- | :--- | :--- | :--: |
-| `control_1` | Control | Basal Medium (pH 7.0) | 1 |
-| `control_2` | Control | Basal Medium (pH 7.0) | 2 |
-| `control_3` | Control | Basal Medium (pH 7.0) | 3 |
-| **`AS_induced_1`** | **Induced** | **Acetosyringone** | 1 |
-| **`AS_induced_2`** | **Induced** | **Acetosyringone** | 2 |
-| **`AS_induced_3`** | **Induced** | **Acetosyringone** | 3 |
+| SRA Accession | Condition | Treatment | Replicate | Library ID |
+| :--- | :--- | :--- | :--: | :--- |
+| **SRR29026269** | Control | Basal Medium (pH 7.0) | 1 | `control_1` |
+| **SRR29026268** | Control | Basal Medium (pH 7.0) | 2 | `control_2` |
+| **SRR29026265** | Control | Basal Medium (pH 7.0) | 3 | `control_3` |
+| **SRR29026261** | **Induced** | **Acetosyringone** | 1 | `AS_induced_1` |
+| **SRR29026260** | **Induced** | **Acetosyringone** | 2 | `AS_induced_2` |
+| **SRR29026259** | **Induced** | **Acetosyringone** | 3 | `AS_induced_3` |
 
 ---
 
@@ -70,5 +70,5 @@ To maintain pipeline performance on a standard workstation, a **selected subset 
 ---
 
 <div align="center">
-  <i>Curated by Fana-e-Ahmed-Attari – Professional Bioinformatics Portfolio.</i>
+  <i>Part of the Curated RNA-Seq Analysis Collection.</i>
 </div>

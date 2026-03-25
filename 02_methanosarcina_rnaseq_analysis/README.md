@@ -30,10 +30,12 @@ This subdirectory hosts the bash execution script (`run_archaea_pipeline.sh`) th
 This pipeline automatically executes the following steps continuously:
 1. **Workspace Initialization**: Creates a structured `READemption_analysis` hierarchy explicitly for *Methanosarcina mazei*.
 2. **Reference Fetching**: Downloads the genome and annotations (`GCF_000007065.1`) directly via NCBI FTP.
-3. **Automated SRA Acquisition**: Leverages the `grabseqs` environment to automatically pull NCBI run IDs:
-   - *SRR4018514* & *SRR4018515* (Wild-Type Replicates)
-   - *SRR4018516* & *SRR4018517* (Mutant Replicates)
-4. **Data Relabeling**: Dynamically maps complex SRA accession numbers to clean biological conditions (`wt_R1`, `mut_R1`, etc.).
+| SRA Accession | Condition | Replicate | Library ID |
+| :--- | :--- | :--: | :--- |
+| **SRR4018514** | Wild-Type | 1 | `wt_R1` |
+| **SRR4018515** | Wild-Type | 2 | `wt_R2` |
+| **SRR4018516** | Mutant | 1 | `mut_R1` |
+| **SRR4018517** | Mutant | 2 | `mut_R2` |
 5. **Core Alignment**: High-performance 11-thread mapping utilizing stringent parameters (`--segemehl_accuracy 95`, `--min_phred_score 20`).
 6. **Gene Quantification**: Statistically counts mapping events across CDS, tRNA, and rRNA boundaries.
 7. **Differential Expression**: Executes DESeq2 variance tests contrasting `mut` against `wt` conditions.

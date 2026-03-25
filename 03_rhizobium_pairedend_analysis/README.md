@@ -51,12 +51,14 @@ The core analysis is executed utilizing the **READemption** pipeline. To handle 
 
 ### ⚙️ 2. The Analytical Pipelines
 
-| Script Name | Purpose & Hardware Suitability | 
-| :--- | :--- |
-| **`run_standard_pipeline.sh`** | **The Default Benchmark:** Processes all paired-end samples simultaneously using standard READemption parameters. <br>⚠️ **Warning:** Extremely storage-intensive (requires 300-400 GB of temporary disk space). Best suited for high-capacity servers. |
-| **`run_memory_optimized_pipeline.sh`** | **The Efficiency Engine:** Designed for systems with limited RAM/Storage. It mitigates storage limits by aligning **one paired-end sample at a time**, clearing temporary fragments instantly, and later harmonizing the BAM files for global downstream statistical analysis. |
-| **`run_bbmerge_pipeline.sh`** | **The Accuracy Maximizer:** Serves as a pre-processing step utilizing `bbmap` (BBMerge) to mathematically overlap and merge R1 and R2 reads into longer contiguous sequences. This drastically improves overall read mapping stringency and downstream alignment quality. |
-| **`run_single_end_pipeline.sh`** | **The Rapid Evaluator:** A streamlined diagnostic pipeline that exclusively processes Forward (R1) reads. By treating the paired-end data strictly as a single-end experiment, it delivers rapid transcriptomic quantifications for preliminary QA/QC. |
+| SRA Accession | Condition | Treatment | Replicate | Library ID |
+| :--- | :--- | :--- | :--: | :--- |
+| **SRR3031957** | Control | Basal Medium | 1 | `control_r1` |
+| **SRR3031958** | Control | Basal Medium | 2 | `control_r2` |
+| **SRR3032151** | Apigenin | Synergistic Induction | 1 | `apigenin_r1` |
+| **SRR3062176** | Apigenin | Synergistic Induction | 2 | `apigenin_r2` |
+| **SRR3036912** | Salt | Abiotic Stress (NaCl) | 1 | `salt_r1` |
+| **SRR3036915** | Salt | Abiotic Stress (NaCl) | 2 | `salt_r2` |
 
 ---
 

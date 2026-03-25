@@ -25,17 +25,14 @@ This subdirectory hosts the robust Bash execution script (`run_salmonella_analys
 
 ---
 
-## ⚙️ Workflow Architecture
-This pipeline systematically executes the following 10 steps identically on every run:
-1. **Workspace Initialization**: Creates a structured `READemption_analysis` hierarchy.
-2. **Reference Fetching**: Pulls target genome annotations (`NC_016810.fa`, etc.) directly via NCBI FTP.
-3. **Annotation Integration**: Downloads and unzips standard GCF features (`GCF_000210855.2`).
-4. **Read Acquisition**: Fetches raw `InSPI2` and `LSP` sequence reads (`.bz2`).
-5. **Core Alignment**: Multi-threaded read mapping with adaptive poly-A clipping.
-6. **Coverage Computation**: Generates strand-specific coverage tracks for browser integration.
-7. **Gene Quantification**: Statistically counts sequencing reads matching CDS, tRNA, and rRNA boundaries.
-8. **Differential Expression**: Executes DESeq2 variance tests.
-9. **Visualization Automation**: Plots alignment demographics and M/A disparity graphs natively.
+### 📊 Experimental Design & Library Mapping
+
+| Dataset Source | Condition | Environment | Replicate | Library ID |
+| :--- | :--- | :--- | :--: | :--- |
+| [InSPI2_R1](http://reademptiondata.imib-zinf.net/InSPI2_R1.fa.bz2) | **InSPI2** | Intracellular-like | 1 | `InSPI2_R1` |
+| [InSPI2_R2](http://reademptiondata.imib-zinf.net/InSPI2_R2.fa.bz2) | **InSPI2** | Intracellular-like | 2 | `InSPI2_R2` |
+| [LSP_R1](http://reademptiondata.imib-zinf.net/LSP_R1.fa.bz2) | **LSP** | Late Stationary Phase | 1 | `LSP_R1` |
+| [LSP_R2](http://reademptiondata.imib-zinf.net/LSP_R2.fa.bz2) | **LSP** | Late Stationary Phase | 2 | `LSP_R2` |
 
 ---
 
