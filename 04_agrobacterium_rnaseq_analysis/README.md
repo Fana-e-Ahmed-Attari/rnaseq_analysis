@@ -56,16 +56,29 @@ I developed a reproducible Bash-based pipeline to process the paired-end RNA-Seq
 
 ---
 
+---
+
 ## 📈 Key Findings & Strategic Insights
 Though this project focused on a subset of the data, the findings align with the expert-level conclusions of the source paper:
-- **T4SS Virginity:** The analysis confirms the intense up-regulation of the *vir* operons (*virB, virC, virD, virE*) required for DNA transfer.
+- **T4SS Induction:** The analysis confirms the intense up-regulation of the *vir* operons (*virB, virC, virD, virE*) required for DNA transfer.
 - **Co-Regulation with T6SS:** The study highlights that strain 1D1108 is unique in its divergent **VgrG profile** and highly specific **Tde toxin-immunity pairs**, which are co-induced to maintain competitive fitness during infection.
 - **Ti Plasmid Replication:** Observed induction of the *repABC* operon, demonstrating synchronized plasmid copy-number increases upon virulence signaling.
 
 ---
 
-## ⚠️ Computational Constraints & Optimization
-To maintain pipeline performance on a standard workstation, a **selected subset of datasets** was utilized. This strategic sub-sampling ensures a fast computational turnaround while maintaining sufficient statistical power to reproduce the primary biological conclusions of the manuscript.
+## 🎨 Analytical Visualizations
+To provide immediate insight into the transcriptomic results, key analytical plots have been curated in the [`visualizations/`](./visualizations) directory:
+
+- **[Agrobacterium_MA_Plot.pdf](./visualizations/Agrobacterium_MA_Plot.pdf)**: Illustrates the relationship between intensity and fold-change, highlighting the significant up-regulation of virulence factors.
+- **[Agrobacterium_Volcano_Plot.pdf](./visualizations/Agrobacterium_Volcano_Plot.pdf)**: Visualizes the statistical significance (p-value) against the magnitude of change (log2 fold change), showcasing the robust response to Acetosyringone.
+
+---
+
+## 📂 Repository Contents
+- **`run_agrobacterium_pipeline.sh`**: The master script that automates the entire analysis.
+- **`README.md`**: This detailed project documentation.
+- **`manuscript/`**: Contains the full scientific paper for biological reference.
+- **`visualizations/`**: curated analytical plots (MA and Volcano plots).
 
 ---
 

@@ -52,6 +52,13 @@ bash run_salmonella_analysis.sh
 
 ---
 
+## 🎨 Analytical Visualizations
+Key results from the Salmonella analysis are curated in the [`visualizations/`](./visualizations) directory:
+- **[Salmonella_MA_Plot.pdf](./visualizations/Salmonella_MA_Plot.pdf)**: Illustrates the expression breadth and fold-change disparity between InSPI2 and LSP conditions.
+- **[Salmonella_Volcano_Plot.pdf](./visualizations/Salmonella_Volcano_Plot.pdf)**: Visualizes statistical significance against log2 fold change, highlighting the primary transcriptomic recruits.
+
+---
+
 ## 📊 Outputs
 The script populates an isolated `READemption_analysis/output/` directory delivering:
 * **`deseq/`**: Full CSV matrices of differentially expressed genes (providing log2FC and padj parameters).

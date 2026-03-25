@@ -56,6 +56,13 @@ bash run_archaea_pipeline.sh
 
 ---
 
+## 🎨 Analytical Visualizations
+Key results from the DESeq2 analysis are curated in the [`visualizations/`](./visualizations) directory:
+- **[Methanosarcina_MA_Plot.pdf](./visualizations/Methanosarcina_MA_Plot.pdf)**: Displays the distribution of differentially expressed genes.
+- **[Methanosarcina_Volcano_Plot.pdf](./visualizations/Methanosarcina_Volcano_Plot.pdf)**: Highlights the most statistically significant genes transitioning between Wild-Type and Mutant states.
+
+---
+
 ## 📄 Manuscript & Documents
 The `manuscript/` folder contains the final publication and supplementary documents associated with this pipeline:
 - `Methanosarcina_RNASeq_Manuscript.pdf` (Main Article)
