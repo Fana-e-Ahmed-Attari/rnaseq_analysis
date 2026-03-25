@@ -27,9 +27,11 @@ This subdirectory hosts the bash execution script (`run_archaea_pipeline.sh`) th
 ---
 
 ## ⚙️ Workflow Architecture
-This pipeline automatically executes the following steps continuously:
+This pipeline automatically executes the following steps:
 1. **Workspace Initialization**: Creates a structured `READemption_analysis` hierarchy explicitly for *Methanosarcina mazei*.
 2. **Reference Fetching**: Downloads the genome and annotations (`GCF_000007065.1`) directly via NCBI FTP.
+3. **Data Acquisition**: Utilizes `grabseqs` to pull raw paired-end reads from the Sequence Read Archive (SRA).
+4. **Library Mapping**: Organizes data into logical experimental cohorts:
 | SRA Accession | Condition | Replicate | Library ID |
 | :--- | :--- | :--: | :--- |
 | **SRR4018514** | Wild-Type | 1 | `wt_R1` |
