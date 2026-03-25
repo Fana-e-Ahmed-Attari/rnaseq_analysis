@@ -13,11 +13,13 @@
 
 ## 📑 Table of Contents
 1. [Overview](#-overview)
-2. [Workflow Architecture](#-workflow-architecture)
-3. [Prerequisites](#-prerequisites)
-4. [Usage Execution](#-usage-execution)
-5. [Manuscript & Documents](#-manuscript--documents)
-6. [Outputs](#-outputs)
+2. [Workflow Architecture](#️-workflow-architecture)
+3. [Experimental Design & Library Mapping](#-experimental-design--library-mapping)
+4. [Prerequisites](#-prerequisites)
+5. [Usage Execution](#-usage-execution)
+6. [Analytical Visualizations](#-analytical-visualizations)
+7. [Analytical Results](#-analytical-results)
+8. [Manuscript & Documents](#-manuscript--documents)
 
 ---
 
@@ -31,16 +33,23 @@ This pipeline automatically executes the following steps:
 1. **Workspace Initialization**: Creates a structured `READemption_analysis` hierarchy explicitly for *Methanosarcina mazei*.
 2. **Reference Fetching**: Downloads the genome and annotations (`GCF_000007065.1`) directly via NCBI FTP.
 3. **Data Acquisition**: Utilizes `grabseqs` to pull raw paired-end reads from the Sequence Read Archive (SRA).
-4. **Library Mapping**: Organizes data into logical experimental cohorts:
+4. **Library Mapping**: Organizes data into logical experimental cohorts (see mapping table below).
+5. **Core Alignment**: High-performance 11-thread mapping utilizing stringent parameters (`--segemehl_accuracy 95`, `--min_phred_score 20`).
+6. **Gene Quantification**: Statistically counts mapping events across CDS, tRNA, and rRNA boundaries.
+7. **Differential Expression**: Executes DESeq2 variance tests contrasting `mut` against `wt` conditions.
+
+---
+
+## 📊 Experimental Design & Library Mapping
+
 | SRA Accession | Condition | Replicate | Library ID |
 | :--- | :--- | :--: | :--- |
 | **SRR4018514** | Wild-Type | 1 | `wt_R1` |
 | **SRR4018515** | Wild-Type | 2 | `wt_R2` |
 | **SRR4018516** | Mutant | 1 | `mut_R1` |
 | **SRR4018517** | Mutant | 2 | `mut_R2` |
-5. **Core Alignment**: High-performance 11-thread mapping utilizing stringent parameters (`--segemehl_accuracy 95`, `--min_phred_score 20`).
-6. **Gene Quantification**: Statistically counts mapping events across CDS, tRNA, and rRNA boundaries.
-7. **Differential Expression**: Executes DESeq2 variance tests contrasting `mut` against `wt` conditions.
+
+---
 
 ---
 
