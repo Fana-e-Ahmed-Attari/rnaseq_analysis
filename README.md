@@ -25,6 +25,7 @@ Welcome to the **RNA-Seq Analysis Collection**. This repository serves as a cent
 | **[`02_methanosarcina_rnaseq_analysis`](./02_methanosarcina_rnaseq_analysis)** | *Methanosarcina mazei* | Archaea | Comparative DGE between WT and Mutant strains. |
 | **[`03_rhizobium_pairedend_analysis`](./03_rhizobium_pairedend_analysis)** | *Rhizobium tropici* | Paired-End | Symbiotic and abiotic salt stress responses. |
 | **[`04_agrobacterium_rnaseq_analysis`](./04_agrobacterium_rnaseq_analysis)** | *Agrobacterium tumefaciens* | Paired-End | Virulence induction via Acetosyringone signaling. |
+| **[`05_docker_reademption_workflow`](./05_docker_reademption_workflow)** | *Salmonella (Docker)* | Infrastructure | Containerized reproducibility benchmarking. |
 
 ---
 
